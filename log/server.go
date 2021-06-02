@@ -16,6 +16,7 @@ func (fl fileLog) Write(data []byte) (int, error) {
 	if err != nil {
 		return 0, err
 	}
+
 	defer f.Close()
 	return f.Write(data)
 }
